@@ -30,13 +30,13 @@ int main()
 #include <cmath>
  
 #define PI 3.14159265
-#define SPEED 300
-#define SENSITIVITY 300
+#define SPEED 30
+#define SENSITIVITY 3000
  
  
 sf::Keyboard::Key rotLeftButton = sf::Keyboard::Left;
 sf::Keyboard::Key rotRightButton = sf::Keyboard::Right;
-sf::Keyboard::Key moveButton = sf::Keyboard::Up;
+sf::Keyboard::Key moveButton = sf::Keyboard::Down;
  
  
 /**
@@ -57,7 +57,7 @@ sf::Vector2f getMovementVector(float rotation)
     float rad = toRad(rotation);
  
     v.x = std::sin(rad);
-    v.y = -std::cos(rad);
+    v.y = std::cos(rad);
  
     return v;
 }
